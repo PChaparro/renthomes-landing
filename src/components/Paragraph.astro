@@ -1,7 +1,11 @@
 ---
+interface Props {
+  extraClasses?: string;
+}
 
+const { extraClasses } = Astro.props;
 ---
 
-<p class="text-xl lg:text-2xl text-balance max-w-prose">
+<p class:list={["text-xl lg:text-2xl text-balance", extraClasses]}>
   <slot />
 </p>

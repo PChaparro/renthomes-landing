@@ -1,13 +1,17 @@
 ---
 interface Props {
   as: "h1" | "h2";
+  extraClasses?: string;
 }
 
-const { as: Element = "h1" } = Astro.props;
+const { as: Element = "h1", extraClasses } = Astro.props;
 ---
 
 <Element
-  class="font-serif text-6xl lg:text-8xl text-balance text-brand-green capitalize"
+  class:list={[
+    "font-serif text-6xl lg:text-8xl text-balance text-brand-green capitalize",
+    extraClasses
+  ]}
 >
   <slot />
 </Element>

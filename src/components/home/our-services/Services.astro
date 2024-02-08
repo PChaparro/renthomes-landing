@@ -1,0 +1,30 @@
+---
+import { Icon } from "astro-icon/components";
+
+import ServicesList from "../../../data/our-services/Services.json";
+
+import Title from "../../Title.astro";
+import Paragraph from "../../Paragraph.astro";
+import ServiceCard from "./ServiceCard.astro";
+---
+
+<section
+  id="services"
+  class="max-w-7xl mx-auto px-4 py-8 md:py-16 text-center grid gap-8 md:gap-16"
+>
+  <div class="space-y-2">
+    <Title as="h2">See our services</Title>
+    <Paragraph>
+      We make finding rentals easy, effortless search, endless choices.
+    </Paragraph>
+  </div>
+  <ul class="flex flex-wrap gap-8 justify-evenly">
+    {
+      ServicesList.map((service) => (
+        <li>
+          <ServiceCard service={service} />
+        </li>
+      ))
+    }
+  </ul>
+</section>
