@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets";
+import journeyImage from "../../../images/journey.webp";
+
+import Button from "../../Button.astro";
+import Title from "../../Title.astro";
+import Paragraph from "../../Paragraph.astro";
+---
+
+<section
+  class="max-w-7xl mx-auto px-4 py-8 md:py-16 grid md:grid-cols-2 gap-8 md:gap-16"
+  id="about"
+>
+  <div class="grid place-items-center order-2 md:order-1">
+    <Image
+      src={journeyImage}
+      alt="A picture of a house"
+      class="w-full max-w-md md:max-w-none rounded-[3.5rem]"
+      width={585}
+      height={365}
+      loading={"lazy"}
+    />
+  </div>
+  <div
+    class="flex flex-col gap-y-8 justify-center text-center md:text-start order-1"
+  >
+    <Title as="h2">Begin your awesome yourney</Title>
+    <Paragraph>
+      Looking for the perfect home to rent? Our user-friendly house rental
+      website makes your search a breeze. Browse through a diverse range of
+      listings, from cozy apartments to spacious family houses.
+    </Paragraph>
+    <Paragraph>
+      With detailed descriptions, vivid photos, and handy filters, finding your
+      ideal rental is just a click away.
+    </Paragraph>
+    <div class="flex justify-center md:justify-start">
+      <Button>Continue</Button>
+    </div>
+  </div>
+</section>
