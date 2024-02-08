@@ -1,0 +1,75 @@
+---
+import { Icon } from "astro-icon/components";
+import NavbarItems from "../../../data/navbar/NavbarItems.json";
+---
+
+<nav
+  class="max-w-7xl mx-auto px-4 h-28 flex md:hidden justify-between items-center border-b animate-fade-down"
+>
+  <a href="#" class="uppercase text-2xl text-brand-green" translate="no">
+    <span><span class="font-bold">RENT</span>HOMES</span>
+  </a>
+  <!-- <ul class="flex items-center gap-8 h-full">
+    {
+      NavbarItems.map((item) => (
+        <li class="text-brand-green font-bold border-b-transparent hover:border-b-brand-green border-b-2 h-full flex items-center transition-colors">
+          <a href={item.href}>{item.text}</a>
+        </li>
+      ))
+    }
+  </ul> -->
+  {/* Black background */}
+  <div
+    class="hidden bg-black/75 fixed inset-0 h-svh z-50"
+    id="mobile-menu__container"
+  >
+    {/* White background */}
+    <div
+      class="bg-white w-full max-w-xs h-full p-4 text-brand-green space-y-2 overflow-y-auto"
+      id="mobile-menu__content"
+    >
+      <button id="mobile-menu__close">
+        <Icon name="close" size={32} class="-mx-2" />
+      </button>
+      {/* Links */}
+      <ul class="flex flex-col gap-6 text-lg">
+        {
+          NavbarItems.map((item) => (
+            <li class="capitalize">
+              <a href={item.href}>{item.text}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+  <button id="mobile-menu__open">
+    <Icon name="bx:menu" class="text-brand-green" size={36} />
+  </button>
+</nav>
+
+<script>
+  const mobileMenuContainer = document.getElementById("mobile-menu__container");
+  const mobileMenuContent = document.getElementById("mobile-menu__content");
+
+  const mobileMenuOpenButton = document.getElementById("mobile-menu__open");
+  const mobileMenuCloseButton = document.getElementById("mobile-menu__close");
+
+  // Prevent the menu to be closed when clicking on the content (White background)
+  mobileMenuContent?.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
+  const mobileMenuTogglers = [
+    mobileMenuOpenButton,
+    mobileMenuCloseButton,
+    mobileMenuContainer
+  ];
+
+  for (const toggler of mobileMenuTogglers) {
+    toggler?.addEventListener("click", () => {
+      console.log("clicked");
+      mobileMenuContainer?.classList.toggle("hidden");
+    });
+  }
+</script>

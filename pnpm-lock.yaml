@@ -11,6 +11,12 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^5.1.0
     version: 5.1.0(astro@4.3.5)(tailwindcss@3.4.1)
+  '@fontsource/david-libre':
+    specifier: ^5.0.18
+    version: 5.0.18
+  '@iconify-json/bx':
+    specifier: 1.1.10
+    version: 1.1.10
   astro:
     specifier: ^4.3.5
     version: 4.3.5(typescript@5.3.3)
@@ -20,6 +26,9 @@ dependencies:
   tailwindcss:
     specifier: ^3.4.1
     version: 3.4.1
+  tailwindcss-animated:
+    specifier: 1.0.1
+    version: 1.0.1(tailwindcss@3.4.1)
   typescript:
     specifier: ^5.3.3
     version: 5.3.3
@@ -630,6 +639,16 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource/david-libre@5.0.18:
+    resolution: {integrity: sha512-mjGZ9nlYtyM9YJuu7nt4zO83OYUQAlT50UcLEjqAiFOvTljIoCYexzsHr3f+VJ6CRAakan2UoAurv3BwxIyu3g==}
+    dev: false
+
+  /@iconify-json/bx@1.1.10:
+    resolution: {integrity: sha512-4JzMDYhs/hkU9mO8nNMNKZwHn706oQaD46URyUuD4fP/XAWGf01vg6wKITmQseEHsHDrtKAXjwcumfnTUDi3OQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
 
   /@iconify/tools@3.0.7:
     resolution: {integrity: sha512-DxfhFLMnooS34dHelpGUnnYrxLZHs0czC1CgrBhAbuL8ddVzBb2VEQm8kh9qGh7A34qeXAB5iSHH3A72rAaFrg==}
@@ -4019,6 +4038,14 @@ packages:
       css-tree: 2.3.1
       csso: 5.0.5
       picocolors: 1.0.0
+    dev: false
+
+  /tailwindcss-animated@1.0.1(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-u5wusj89ZwP8I+s8WZlaAd7aZTWBN/XEG6QgMKpkIKmAf3xP1A6WYf7oYIKmGaB10UAQaSqWopi/i1ozzZEs8Q==}
+    peerDependencies:
+      tailwindcss: '>=3.1.0'
+    dependencies:
+      tailwindcss: 3.4.1
     dev: false
 
   /tailwindcss@3.4.1:

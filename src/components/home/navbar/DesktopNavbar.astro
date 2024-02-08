@@ -1,0 +1,20 @@
+---
+import NavbarItems from "../../../data/navbar/NavbarItems.json";
+---
+
+<nav
+  class="hidden md:flex max-w-7xl mx-auto px-4 h-28 justify-between items-center border-b animate-fade-down"
+>
+  <a href="#" class="uppercase text-2xl text-brand-green" translate="no">
+    <span><span class="font-bold">RENT</span>HOMES</span>
+  </a>
+  <ul class="flex items-center gap-8 h-full">
+    {
+      NavbarItems.map((item) => (
+        <li class="text-brand-green capitalize font-bold border-b-transparent hover:border-b-brand-green border-b-2 h-full flex items-center transition-colors">
+          <a href={item.href}>{item.text}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
