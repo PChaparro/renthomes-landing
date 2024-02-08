@@ -7,11 +7,11 @@ import Title from "../../../components/Title.astro";
 import Paragraph from "../../../components/Paragraph.astro";
 ---
 
-<header class="max-w-7xl mx-auto px-4 py-8 md:py-16 md:grid grid-cols-2 gap-8">
+<header
+  class="max-w-7xl mx-auto px-4 py-8 md:py-16 md:grid grid-cols-2 gap-8 md:gap-16"
+>
   {/* Hero texts */}
-  <div
-    class="flex flex-col gap-y-8 animate-fade-right justify-center text-center md:text-start"
-  >
+  <div class="flex flex-col gap-y-8 justify-center text-center md:text-start">
     <Title as="h1">Your rental journey begins here</Title>
     <Paragraph>
       We make finding rentals easy, effortless search, endless choices.
@@ -26,7 +26,7 @@ import Paragraph from "../../../components/Paragraph.astro";
     <Image
       src={heroImage}
       alt="Illustration of two persons receiving the keys of their new home"
-      class="w-full animate-fade-left max-w-md md:max-w-lg"
+      class="w-full max-w-md md:max-w-lg"
       width={500}
       height={500}
     />
