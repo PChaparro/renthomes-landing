@@ -3,6 +3,8 @@ import { Image } from "astro:assets";
 import heroImage from "../../../images/hero.webp";
 
 import Button from "../../../components/Button.astro";
+import Title from "../../../components/Title.astro";
+import Paragraph from "../../../components/Paragraph.astro";
 ---
 
 <header class="max-w-7xl mx-auto px-4 py-8 md:py-16 md:grid grid-cols-2 gap-8">
@@ -10,14 +12,10 @@ import Button from "../../../components/Button.astro";
   <div
     class="flex flex-col gap-y-8 animate-fade-right justify-center text-center md:text-start"
   >
-    <h1
-      class="font-serif text-6xl lg:text-8xl text-balance text-brand-green capitalize"
-    >
-      Your rental journey begins here
-    </h1>
-    <p class="text-xl lg:text-2xl text-pretty">
+    <Title as="h1">Your rental journey begins here</Title>
+    <Paragraph>
       We make finding rentals easy, effortless search, endless choices.
-    </p>
+    </Paragraph>
     <div class="flex gap-8 flex-wrap justify-center md:justify-start">
       <Button>Rent now</Button>
       <Button variant="outline">Rent your place</Button>

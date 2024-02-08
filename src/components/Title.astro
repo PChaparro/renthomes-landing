@@ -1,0 +1,13 @@
+---
+interface Props {
+  as: "h1" | "h2";
+}
+
+const { as: Element = "h1" } = Astro.props;
+---
+
+<Element
+  class="font-serif text-6xl lg:text-8xl text-balance text-brand-green capitalize"
+>
+  <slot />
+</Element>
