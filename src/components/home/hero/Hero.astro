@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import heroImage from "../../../images/hero.webp";
+---
+
+<header class="max-w-7xl mx-auto px-4 py-8 md:py-16 md:grid grid-cols-2 gap-8">
+  {/* Hero texts */}
+  <div
+    class="flex flex-col gap-y-8 animate-fade-right justify-center text-center md:text-start"
+  >
+    <h1
+      class="font-serif text-6xl lg:text-8xl text-balance text-brand-green capitalize"
+    >
+      Your rental journey begins here
+    </h1>
+    <p class="text-xl lg:text-2xl text-pretty">
+      We make finding rentals easy, effortless search, endless choices.
+    </p>
+    <div class="flex gap-8 flex-wrap justify-center md:justify-start">
+      <a
+        href="#"
+        class="bg-brand-green text-white rounded-3xl text-xl lg:text-2xl py-3 px-6 inline-block"
+      >
+        Rent now
+      </a>
+      <a
+        href="#"
+        class="bg-white border border-brand-green text-brand-green rounded-3xl text-xl lg:text-2xl py-3 px-6 inline-block"
+      >
+        Rent your place
+      </a>
+    </div>
+  </div>
+  {/* Hero image */}
+  <div class="grid place-items-center">
+    <Image
+      src={heroImage}
+      alt="Illustration of two persons receiving the keys of their new home"
+      class="w-full animate-fade-left max-w-md md:max-w-lg"
+      width={500}
+      height={500}
+    />
+  </div>
+</header>
