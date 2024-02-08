@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import heroImage from "../../../images/hero.webp";
+
+import Button from "../../../components/Button.astro";
 ---
 
 <header class="max-w-7xl mx-auto px-4 py-8 md:py-16 md:grid grid-cols-2 gap-8">
@@ -17,18 +19,8 @@ import heroImage from "../../../images/hero.webp";
       We make finding rentals easy, effortless search, endless choices.
     </p>
     <div class="flex gap-8 flex-wrap justify-center md:justify-start">
-      <a
-        href="#"
-        class="bg-brand-green text-white rounded-3xl text-xl lg:text-2xl py-3 px-6 inline-block"
-      >
-        Rent now
-      </a>
-      <a
-        href="#"
-        class="bg-white border border-brand-green text-brand-green rounded-3xl text-xl lg:text-2xl py-3 px-6 inline-block"
-      >
-        Rent your place
-      </a>
+      <Button>Rent now</Button>
+      <Button variant="outline">Rent your place</Button>
     </div>
   </div>
   {/* Hero image */}

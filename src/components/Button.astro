@@ -1,0 +1,33 @@
+---
+type buttonVariant = "default" | "outline";
+type buttonSizes = "lg";
+
+const sharedClasses =
+  "border rounded-3xl py-3 px-6 inline-block shadow transition-all duration-300";
+
+const buttonVariantsClasses: Record<buttonVariant, string> = {
+  default: "bg-brand-green border-transparent text-white hover:brightness-110",
+  outline: "bg-white border-brand-green text-brand-green"
+};
+
+const buttonSizesClasses: Record<buttonSizes, string> = {
+  lg: "text-xl lg:text-2xl"
+};
+
+interface Props {
+  variant?: buttonVariant;
+  size?: buttonSizes;
+  href?: string;
+}
+
+const { variant = "default", size = "lg", href = "#" }: Props = Astro.props;
+---
+
+<a
+  href={href}
+  class:list={[
+    sharedClasses,
+    buttonVariantsClasses[variant],
+    buttonSizesClasses[size]
+  ]}><slot /></a
+>
