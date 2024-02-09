@@ -15,7 +15,7 @@ const { service } = Astro.props;
 ---
 
 <article
-  class="bg-brand-green w-full max-w-80 grid place-content-center gap-4 p-8 rounded-3xl h-full text-white intersect:animate-fade-up"
+  class="bg-brand-green w-full max-w-80 flex flex-col place-content-center gap-4 p-8 rounded-3xl h-full text-white intersect:animate-fade-up"
 >
   <Icon name={service.icon_name} size={96} class="mx-auto" />
   <h3 class="text-4xl font-bold">{service.title}</h3>
