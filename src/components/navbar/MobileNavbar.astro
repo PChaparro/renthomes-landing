@@ -18,7 +18,7 @@ import NavbarItems from "../../data/navbar/NavbarItems.json";
       class="bg-white w-full max-w-xs h-full p-4 text-brand-green space-y-2 overflow-y-auto"
       id="mobile-menu__content"
     >
-      <button id="mobile-menu__close">
+      <button id="mobile-menu__close" aria-label="Close menu">
         <Icon name="close" size={32} class="-mx-2" />
       </button>
       {/* Links */}
@@ -33,7 +33,7 @@ import NavbarItems from "../../data/navbar/NavbarItems.json";
       </ul>
     </div>
   </div>
-  <button id="mobile-menu__open">
+  <button id="mobile-menu__open" aria-label="Open menu">
     <Icon name="bx:menu" class="text-brand-green" size={36} />
   </button>
 </nav>
