@@ -15,14 +15,14 @@ import Paragraph from "../../Paragraph.astro";
     <Image
       src={journeyImage}
       alt="A picture of a house"
-      class="w-full max-w-md md:max-w-none rounded-[3.5rem]"
+      class="w-full max-w-md md:max-w-none rounded-[3.5rem] intersect:animate-fade-up md:intersect:animate-fade-right"
       width={585}
       height={365}
       loading={"lazy"}
     />
   </div>
   <div
-    class="flex flex-col gap-y-8 justify-center text-center md:text-start order-1"
+    class="flex flex-col gap-y-8 justify-center text-center md:text-start order-1 intersect:animate-fade-up md:intersect:animate-fade-left"
   >
     <Title as="h2">Begin your awesome yourney</Title>
     <Paragraph>
