@@ -19,7 +19,7 @@ import ServiceCard from "./ServiceCard.astro";
   <ul class="flex flex-wrap gap-8 justify-evenly">
     {
       ServicesList.map((service) => (
-        <li>
+        <li class="w-full max-w-80">
           <ServiceCard service={service} />
         </li>
       ))
