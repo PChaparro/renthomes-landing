@@ -1,0 +1,17 @@
+[
+  {
+    "customer_picture_url": "/images/customers/0.webp",
+    "customer_name": "Gudrun Sissel",
+    "customer_review": "\"I loved the experience, renting a home was an pleasure. From the communication was seamless and professional\"."
+  },
+  {
+    "customer_picture_url": "/images/customers/1.webp",
+    "customer_name": "Alex Mitchell",
+    "customer_review": "\"It was an Amazing Experience, the attention to detail, personalized approach made the entire process stress-free\"."
+  },
+  {
+    "customer_picture_url": "/images/customers/2.webp",
+    "customer_name": "Arnbjørg Beatrice",
+    "customer_review": "\"Our experience was so good with renting services exceeded all expectations. Demonstrated a deep understanding\"."
+  }
+]

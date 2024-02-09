@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets";
+
+type Testimonial = {
+  customer_picture_url: string;
+  customer_name: string;
+  customer_review: string;
+};
+
+interface Props {
+  testimonial: Testimonial;
+}
+
+const { testimonial } = Astro.props;
+---
+
+<article
+  class="border-brand-green border-4 flex flex-col items-center justify-center gap-4 py-4 px-8 h-full intersect:animate-fade-up rounded-3xl rounded-tr-[4.5rem] rounded-bl-[4.5rem]"
+>
+  <Image
+    src={testimonial.customer_picture_url}
+    alt={`Picture of ${testimonial.customer_name}`}
+    width={128}
+    height={128}
+    loading={"lazy"}
+    class="rounded-full"
+  />
+  <h3 class="text-brand-green font-bold text-2xl">
+    {testimonial.customer_name}
+  </h3>
+  <p class="text-balance text-lg">
+    {testimonial.customer_review}
+  </p>
+</article>

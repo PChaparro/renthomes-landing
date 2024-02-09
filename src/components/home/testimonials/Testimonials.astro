@@ -1,0 +1,28 @@
+---
+import testimonials from "../../../data/testimonials/Testimonials.json";
+
+import Title from "../../Title.astro";
+import Paragraph from "../../Paragraph.astro";
+import TestimonialCard from "./TestimonialCard.astro";
+---
+
+<section
+  id="reviews"
+  class="max-w-7xl mx-auto px-4 py-8 md:py-16 text-center flex flex-col gap-8 md:gap-16"
+>
+  <div class="space-y-2 intersect:animate-fade-up max-w-4xl mx-auto">
+    <Title as="h2">What customers say about our services</Title>
+    <Paragraph>
+      We are proud to have helped many customers to rent their dream home.
+    </Paragraph>
+  </div>
+  <ul class="flex flex-wrap gap-8 justify-evenly">
+    {
+      testimonials.map((testimonial) => (
+        <li class="w-full max-w-80">
+          <TestimonialCard testimonial={testimonial} />
+        </li>
+      ))
+    }
+  </ul>
+</section>
