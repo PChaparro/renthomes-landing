@@ -8,7 +8,7 @@ import FooterSocials from "./FooterSocials.astro";
 
 <footer class="max-w-7xl mx-auto p-4 text-black/75 text-lg" id="contact">
   <div
-    class="grid text text-center grid-cols-2 sm:text-start sm:grid-cols-3 md:grid-cols-4 gap-8 [&>div]:space-y-4"
+    class="grid text grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 [&>div]:space-y-4"
   >
     {/* First column */}
     <div>
@@ -18,7 +18,7 @@ import FooterSocials from "./FooterSocials.astro";
     {/* Second and third columns */}
     {
       footerColumns.map((column) => (
-        <FooterColumn title={column.title}>
+        <FooterColumn title={column.title} extraClasses="md:text-center">
           {column.items.map((item) => (
             <FooterColumItem>
               <a href={item.href}>{item.text}</a>
@@ -28,7 +28,7 @@ import FooterSocials from "./FooterSocials.astro";
       ))
     }
     {/* Fourth column */}
-    <FooterColumn title={"Contact us"}>
+    <FooterColumn title={"Contact us"} extraClasses="md:text-end">
       <FooterColumItem>
         <a href="mailto:example@email.com">Via email</a>
       </FooterColumItem>
