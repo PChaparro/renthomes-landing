@@ -1,0 +1,15 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  iconName: string;
+}
+
+const { iconName } = Astro.props;
+---
+
+<li
+  class="bg-brand-green-soft aspect-square w-10 grid place-content-center rounded-full border-brand-green border-2 hover:bg-brand-green transition-colors hover:text-white"
+>
+  <Icon name={iconName} />
+</li>

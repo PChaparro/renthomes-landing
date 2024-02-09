@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Useful links",
+    "items": [
+      {
+        "text": "About us",
+        "href": "#about"
+      },
+      {
+        "text": "Events",
+        "href": "#"
+      },
+      {
+        "text": "Blogs",
+        "href": "#"
+      },
+      {
+        "text": "FAQ",
+        "href": "#"
+      }
+    ]
+  },
+  {
+    "title": "Main menu",
+    "items": [
+      {
+        "text": "Home",
+        "href": "#"
+      },
+      {
+        "text": "Offers",
+        "href": "#"
+      },
+      {
+        "text": "Menus",
+        "href": "#"
+      },
+      {
+        "text": "Reservation",
+        "href": "#"
+      }
+    ]
+  }
+]
